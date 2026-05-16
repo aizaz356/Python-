@@ -1,0 +1,22 @@
+from test import code_holder
+
+def test_first():
+    assert code_holder(1,2) == 3
+
+def test_second():
+    assert code_holder(0,0) == 0
+
+def test_third():
+    assert code_holder(-12, -99) == -12 + -99
+
+def test_fourth():
+    assert code_holder(15,39) == 15+39
+
+def test_positive():
+    assert code_holder(3,9) == 3+9
+
+def test_negative():
+    assert code_holder(-3,-9) == -3+ -9
+
+def positive_negative():
+    assert code_holder(9,0,12,100) == 121

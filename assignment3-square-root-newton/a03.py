@@ -1,0 +1,36 @@
+## IMPORTS GO HERE
+
+import math
+
+## END OF IMPORTS
+
+
+
+### YOUR CODE FOR sqrt() FUNCTION GOES HERE ###
+
+def sqrt(x):
+    return math.sqrt(x)
+
+### END OF MARKER
+
+
+###  YOUR CODE FOR average() FUNCTION GOES HERE ###
+
+def average(a, b):
+    return (a + b) / 2
+
+### END OF MARKER
+
+
+### YOUR CODE FOR improve_guess() FUNCTION GOES HERE ###
+
+def improve_guess(guess, x):
+    return average(guess, x / guess)
+
+### ENFD OF MARKER
+
+
+
+
+if __name__ == '_main_':
+    print (sqrt(36))

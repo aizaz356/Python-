@@ -1,0 +1,43 @@
+try:
+  from test/a02 import get_area, output_parameter
+  
+except ImportError:
+  pass
+  
+epsilon = 0.001   # precision needed
+
+import math
+
+def test_floats():
+  vals = [2.0,2.9,1.9,22.0,3.09]
+  
+for v in vals:
+  assert abs (get_area(v))-(math.pi *v*v) <epsilon
+  
+def test_parameter_float():
+  val = 1.999
+  v, out= capture_output(output_parameter)(val)
+  
+assert out.starts with("The parameter of the circle with radius 1.999 is 12.560")  OR  assert "12.560" in out #less strict,avoid rounding issues
+
+
+# output capturing decorator
+def capture_output(fn):                      # decorator function 
+def wrapper(*args,**kwargs):                 # in decoder inner function with arguments[(*args is Arbitrary positional arguments),(**kwargs is Arbitrary keyword arguments)]
+import sys                                   # sys is system specific parameters and functions
+from io import StringIO                      # bring IO allow us to capture output
+orig_stdout = sys.stdout                     # save original output 
+capturedOutput = StringIO                    # create a String IO object to capture output
+sys.stdout = captured Output                 # redirect stdout to the String IO object
+
+v = fn(*args,**kwgs)                         # call the original function with its arguments 
+
+sys.stdout = orig_stdout                     # restore original stdout
+
+output_val=captured Output.get value()      # print 'Captured' ,CapturedOutput.getvalue()
+return v ,output_v                          # return both: v(the function actual return value), output_v(all captured output)
+return wrapper                              # return the inner function
+  
+
+ 
+
