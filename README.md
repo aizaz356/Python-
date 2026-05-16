@@ -1,1 +1,4 @@
-This is all Python assignments
+This is Python Assignments.
+This is Python problems.
+This is Jupyter Notebook.
+
