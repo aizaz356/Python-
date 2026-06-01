@@ -15,14 +15,14 @@ def is_prime(n):
     return True
 #### END OF MARKER 
 
-#### YOUR CODE FOR is_prime() FUNCTION GOES HERE ####
+#### YOUR CODE FOR output_factors() FUNCTION GOES HERE ####
 def output_factors(n):
     for i in range(1, n + 1):
         if n % i == 0:
             print(i)
 #### END OF MARKER
 
-#### YOUR CODE FOR is_prime() FUNCTION GOES HERE ####
+#### YOUR CODE FOR get_largest_prime() FUNCTION GOES HERE ####
 def get_largest_prime(n):
     for i in range(n - 1, 1, -1):
         if is_prime(i):

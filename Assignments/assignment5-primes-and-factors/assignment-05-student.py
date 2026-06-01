@@ -3,18 +3,19 @@ try:
 except ImportError:
     pass
 
+# is_prime
 def test_is_prime_1():
     for i in [5, 139, 631, 919]:
         assert is_prime(i) == True
         
 def test_is_prime_float_1():
-    assert ois-prime(6.09) == False
+    assert is_prime(6.09) == False
     
-def test_prime_float_2():
+def test_is_prime_float_2():
     assert is_prime(6.0) == False
     
 
-# get_lrgest_prime
+# get_largest_prime
 
 def test_get_prime_1():
     assert get_largest_prime(7920) == 7919

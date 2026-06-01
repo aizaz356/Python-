@@ -3,6 +3,8 @@ try:
 except:
     pass
 
+# is_prime
+
 def test_is_prime_float_1():
     assert is_prime(6.1) == False
 
@@ -25,7 +27,7 @@ def test_is_prime_neg_1():
 def test_is_prime_neg_2():
     assert is_prime(-7) == None
 
-# largest_prime
+# get_largest_prime
 
 def test_get_prime_1():
     assert get_largest_prime(1.0) == None
@@ -33,10 +35,10 @@ def test_get_prime_1():
 def test_get_prime_2():
     assert get_largest_prime(2.05) == 2
 
-def test_get_ptime_3():
+def test_get_prime_3():
     assert get_largest_prime(7.09) == 7
 
-# output factors
+# output_factors
 
 def test_output_factors_1():
     v, out = capture_output(output_factors)(867)
